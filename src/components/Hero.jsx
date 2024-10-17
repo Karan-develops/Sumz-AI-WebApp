@@ -11,7 +11,7 @@ const Hero = () => {
 
         <button
           type="button"
-          onClick={() => window.open("", "_blank")}
+          onClick={() => window.open("https://github.com/Karan-develops/Sumz-AI-WebApp", "_blank")}
           className="flex gap-1 black_btn"
         >
           GitHub <Github className="h-5" />
