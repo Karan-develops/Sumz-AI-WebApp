@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  background-color: #0d0d0d;
+}
+
+.main:before {
+  background: none;
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.1;
+  filter: invert(0.5);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 0, 0) -10.7%,
+    rgb(53, 92, 125) 8.8%
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(80px) saturate(120%);
+  top: 80px;
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.black_btn {
+  @apply mt-1 rounded-full font-bold border border-white bg-black px-5 py-3 text-sm text-white transition-all hover:bg-white hover:text-black;
+}
+
+.head_text {
+  @apply mt-6 text-5xl font-extrabold leading-[1.15] text-white sm:text-6xl text-center;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-400 sm:text-xl text-center max-w-2xl;
+}
+
+.url_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:outline-none focus:ring-2 focus:ring-[#c47e34];
+}
+
+
+.submit_btn {
+  @apply absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center;
+}
+
+.link_card {
+  @apply p-3 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-white to-orange-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl bg-gradient-to-r from-white to-cyan-400 border border-gray-200 bg-white p-4 w-[70vw];
+}
